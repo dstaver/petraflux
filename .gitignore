@@ -37,6 +37,9 @@ jspm_packages/
 # Optional npm cache directory
 .npm
 
+# Parcel cache
+.cache
+
 # Optional eslint cache
 .eslintcache
 

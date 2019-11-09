@@ -1,0 +1,6 @@
+{
+  "workbench.settings.useSplitJSON": true,
+  "files.associations": {
+    "*.json": "jsonc"
+  }
+}

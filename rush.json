@@ -1,12 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
   "rushVersion": "5.16.1",
-  "pnpmVersion": "2.15.1",
+  "pnpmVersion": "4.1.7",
   "pnpmOptions": {
     "strictPeerDependencies": true,
     "resolutionStrategy": "fewer-dependencies"
   },
   "nodeSupportedVersionRange": ">=10.13.0",
+  "ensureConsistentVersions": true,
   "suppressNodeLtsWarning": true,
   "gitPolicy": {},
   "repository": {
@@ -21,8 +22,13 @@
   "variants": [],
   "projects": [
     {
-      "packageName": "react-timline",
+      "packageName": "react-timeline",
       "projectFolder": "react-timeline",
+      "reviewCategory": "production"
+    },
+    {
+      "packageName": "loglevel-plugin-color",
+      "projectFolder": "loglevel-plugin-color",
       "reviewCategory": "production"
     }
   ]
