@@ -1,0 +1,23 @@
+{
+  "name": "@petraflux/eslint-config",
+  "version": "0.1.0",
+  "scripts": {
+    "ncu": "ncu",
+    "ncu-u": "ncu -u",
+    "build": ""
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.11.0",
+    "@typescript-eslint/parser": "^2.11.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.17.0",
+    "prettier": "^1.19.1"
+  },
+  "devDependencies": {
+    "@types/eslint": "^6.1.3",
+    "npm-check-updates": "^4.0.1",
+    "typescript": "^3.7.3"
+  }
+}
