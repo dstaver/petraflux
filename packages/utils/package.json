@@ -1,6 +1,6 @@
 {
   "name": "@petraflux/utils",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Utility functions",
   "author": "Daniel Staver <daniel@petraflux.com>",
   "homepage": "https://github.com/dstaver/petraflux#readme",
