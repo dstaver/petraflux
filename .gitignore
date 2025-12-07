@@ -28,6 +28,7 @@ bower_components
 build/Release
 common/temp/**
 coverage
+dist/
 jspm_packages/
 lib-cov
 node_modules/
