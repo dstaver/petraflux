@@ -1,6 +1,12 @@
 {
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": false
+  },
   "workbench.settings.useSplitJSON": true,
   "files.associations": {
     "*.json": "jsonc"
-  }
+  },
+  "typescript.experimental.useTsgo": true
 }
