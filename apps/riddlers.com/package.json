@@ -1,28 +1,42 @@
 {
   "name": "@petraflux/riddlers.com",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "sideEffects": false,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "build": "vite build && tsgo",
+    "check": "prettier --write . && oxlint --fix",
+    "dev": "vite --port 3000",
+    "format": "prettier --check --write .",
+    "lint": "oxlint -f unix",
+    "lint-fix": "oxlint -f unix --fix",
+    "serve": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsgo --noEmit"
   },
   "dependencies": {
-    "next": "catalog:",
+    "immer": "11.0.1",
+    "radash": "12.1.1",
     "react": "catalog:",
-    "react-dom": "catalog:"
+    "react-aria-components": "1.13.0",
+    "react-dom": "catalog:",
+    "zustand": "4.5.0",
+    "zustand-x": "3.0.2"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "catalog:",
-    "@typescript/native-preview": "catalog:",
-    "@types/bun": "catalog:",
-    "@types/node": "catalog:",
+    "@tailwindcss/typography": "0.5.19",
+    "@tailwindcss/vite": "4.1.17",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
-    "eslint": "catalog:",
-    "eslint-config-next": "catalog:",
-    "tailwindcss": "catalog:",
-    "typescript": "catalog:"
+    "@vitejs/plugin-react": "catalog:",
+    "clsx": "2.1.1",
+    "daisyui": "5.5.11",
+    "oxlint": "catalog:",
+    "postcss": "8.5.6",
+    "tailwindcss": "4.1.17",
+    "tailwindcss-animate": "1.0.7",
+    "tailwindcss-react-aria-components": "2.0.1",
+    "vite": "catalog:",
+    "vite-plugin-svgr": "4.5.0"
   }
 }

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32">
+    <rect width="9" height="9" x="2" y="2" fill="oklch(0.6971 0.329 342.55)" />
+    <rect width="10" height="10" x="11" y="11" fill="oklch(0.7676 0.184 183.61)" />
+    <rect width="9" height="9" x="21" y="21" fill="oklch(0.8471 0.199 83.87)" />
+    <path d="M2 11h28M2 21h28M11 2v28M21 2v28" stroke="c" />
+    <style>
+        path {
+          opacity: 0.5;
+          stroke: #000;
+          stroke-width: 2;
+          stroke-linejoin: round;
+          stroke-linecap: round;
+        }
+        @media (prefers-color-scheme: dark) {
+            path { stroke: #FFF; }
+        }
+
+    </style>
+</svg>
+

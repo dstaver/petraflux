@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+@plugin "tailwindcss-react-aria-components";
+@plugin "daisyui" {
+  themes: light --default;
+}
+@plugin "tailwindcss-animate";
+
+@theme {
+  --font-sans: Menlo,
+    Monaco,
+    Lucida Console,
+    Liberation Mono,
+    DejaVu Sans Mono,
+    Bitstream Vera Sans Mono,
+    Courier New,
+    monospace;
+}
+

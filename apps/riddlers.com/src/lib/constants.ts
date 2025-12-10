@@ -1,0 +1,103 @@
+import { group, list, mapValues, sum } from 'radash'
+export const sums = list(1, 45)
+export const emptySums: number[] = []
+export const sumCollection = list(1, 45, (n) => ({
+  id: n,
+  name: String(n),
+}))
+export const digits = list(1, 9)
+
+export type Combo = {
+  /** Sum of numbers in this combination */
+  sum: number
+  /** Sum of numbers in this combination as array */
+  sumArray: number[]
+  /** Number of digits in this combination */
+  length: number
+  /** Numbers as array */
+  numbers: number[]
+  /** Numbers as string */
+  numberString: string
+  /** Numbers as string of length 9, with '.' for every missing number */
+  numberStringFull: string
+}
+
+const initial = digits.map<Combo>((d) => createCombo([d]))
+const all = combine({ arr: initial, digits })
+const bySum = group(all, (v) => v.sum) as Record<number, Combo[]>
+const byLength = group(all, (v) => v.length) as Record<number, Combo[]>
+export const combinations = {
+  /** Array of all combinations */
+  all,
+  /** Grouped by sum */
+  bySum,
+  /** Grouped by length */
+  byLength,
+}
+
+export function combinationsBySum(items: Combo[]): [string, Combo[]][] {
+  return Object.entries(
+    group(items, (item) => item.sum) as Record<number, Combo[]>,
+  )
+}
+export function combinationsByLength(items: Combo[]): [string, Combo[]][] {
+  return Object.entries(
+    group(items, (item) => item.length) as Record<number, Combo[]>,
+  )
+}
+export function combinationsBySumAndLength(
+  items: Combo[],
+): [string, [string, Combo[]][]][] {
+  return Object.entries(
+    mapValues(
+      group(items, (item) => item.sum) as Record<number, Combo[]>,
+      (v) => combinationsByLength(v),
+    ),
+  )
+}
+
+function combine({
+  arr,
+  digits,
+  current = 1,
+  max = 9,
+}: {
+  arr: Combo[]
+  digits: number[]
+  current?: number
+  max?: number
+}): Combo[] {
+  const combined = arr.flatMap<Combo>((combo) =>
+    digits
+      .filter(
+        (d) =>
+          !combo.numbers.includes(d) &&
+          d > combo.numbers[combo.numbers.length - 1],
+      )
+      .map((d) => createCombo([...combo.numbers, d])),
+  )
+
+  return [
+    ...arr,
+    ...(current < max
+      ? combine({ arr: combined, digits, current: current + 1, max })
+      : combined),
+  ]
+}
+function createCombo(numbers: number[]): Combo {
+  const s = sum(numbers)
+  return {
+    sum: s,
+    sumArray: numberToArray(s),
+    length: numbers.length,
+    numbers,
+    numberString: numbers.join(''),
+    numberStringFull: digits
+      .map((n) => (numbers.includes(n) ? String(n) : '.'))
+      .join(''),
+  }
+}
+
+export function numberToArray(n: number): number[] {
+  return [...n.toString()].map((n) => Number.parseInt(n, 10))
+}
