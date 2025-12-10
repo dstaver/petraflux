@@ -1,0 +1,35 @@
+{
+  "$schema": "./node_modules/syncpack/schema.json",
+  "indent": "  ",
+  "customTypes": {
+    "bunCatalog": {
+      "strategy": "versionsByName",
+      "path": "workspaces.catalog"
+    }
+  },
+  "sortAz": [
+    "bin",
+    "contributors",
+    "dependencies",
+    "devDependencies",
+    "keywords",
+    "peerDependencies",
+    "resolutions",
+    "scripts",
+    "catalog"
+  ],
+  "sortFirst": [
+    "name",
+    "private",
+    "description",
+    "version",
+    "type",
+    "repository",
+    "author",
+    "sideEffects",
+    "scripts",
+    "packageManager",
+    "workspaces",
+    "workspaces.catalog"
+  ]
+}

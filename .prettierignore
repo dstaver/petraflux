@@ -1,0 +1,6 @@
+**/.next
+**/coverage
+**/dist
+**/docs
+**/snap
+pnpm-lock.yaml

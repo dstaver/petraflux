@@ -1,15 +1,19 @@
 {
   "name": "root",
   "private": true,
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/dstaver/petraflux.git"
   },
-  "packageManager": "bun@1.3.3",
-  "type": "module",
   "scripts": {
+    "format": "prettier --check --write .",
+    "lint": "oxlint",
+    "ws-eslint": "bun --filter '@petraflux/eslint-config'",
+    "ws-riddlers": "bun --filter '@petraflux/riddlers.com'",
     "ws-virtual": "bun --filter '@petraflux/react-virtual'"
   },
+  "packageManager": "bun@1.3.4",
   "workspaces": {
     "packages": [
       "apps/*",
@@ -17,20 +21,23 @@
     ],
     "catalog": {
       "@tailwindcss/postcss": "4.1.17",
-      "@types/bun": "1.3.3",
-      "@types/node": "24.10.1",
-      "@types/react-dom": "19.2.3",
+      "@types/bun": "1.3.4",
+      "@types/node": "24.10.2",
       "@types/react": "19.2.7",
-      "@typescript/native-preview": "7.0.0-dev.20251207.1",
-      "@vitejs/plugin-react": "5.1.1",
-      "eslint": "9.39.1",
-      "eslint-config-next": "16.0.7",
-      "next": "16.0.7",
+      "@types/react-dom": "19.2.3",
+      "@typescript/native-preview": "7.0.0-dev.20251210.1",
+      "@vitejs/plugin-react": "5.1.2",
+      "globals": "16.5.0",
       "npm-check-updates": "19.1.2",
+      "oxlint": "1.32.0",
+      "oxlint-tsgolint": "0.8.4",
       "prettier": "3.7.4",
-      "react-dom": "19.2.1",
+      "prettier-plugin-tailwindcss": "0.7.2",
       "react": "19.2.1",
+      "react-dom": "19.2.1",
+      "syncpack": "14.0.0-alpha.32",
       "tailwindcss": "4.1.17",
+      "tsdown": "0.17.0",
       "typescript": "5.9.3",
       "vite": "8.0.0-beta.0"
     }
@@ -39,9 +46,12 @@
     "@types/bun": "catalog:",
     "@types/node": "catalog:",
     "@typescript/native-preview": "catalog:",
-    "eslint": "catalog:",
     "npm-check-updates": "catalog:",
+    "oxlint": "catalog:",
+    "oxlint-tsgolint": "catalog:",
     "prettier": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:",
+    "syncpack": "catalog:",
     "typescript": "catalog:"
   }
 }

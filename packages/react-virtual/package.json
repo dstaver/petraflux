@@ -2,14 +2,17 @@
   "name": "@petraflux/react-virtual",
   "version": "0.0.1",
   "type": "module",
+  "sideEffects": false,
   "scripts": {
+    "build": "vite build && tsgo",
+    "check": "prettier --write . && oxlint --fix",
     "dev": "vite --port 3000",
-    "build": "vite build && tsc",
+    "format": "prettier --check --write .",
+    "lint": "oxlint -f unix",
+    "lint-fix": "oxlint -f unix --fix",
     "serve": "vite preview",
     "test": "vitest run",
-    "lint": "eslint .",
-    "format": "prettier",
-    "check": "prettier --write . && eslint --fix"
+    "typecheck": "tsgo --noEmit"
   },
   "dependencies": {
     "react": "catalog:",
@@ -19,6 +22,7 @@
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@vitejs/plugin-react": "catalog:",
+    "oxlint": "catalog:",
     "vite": "catalog:"
   }
 }

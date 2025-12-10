@@ -1,5 +1,3 @@
 export function HelloReactVirtual() {
-  return <>
-  Hello from react-virtual!
-  </>
+  return <>Hello from react-virtual!</>
 }

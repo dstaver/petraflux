@@ -1,0 +1,78 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "eslint",
+    "import",
+    "react-perf",
+    "react",
+    "typescript",
+    "unicorn"
+  ],
+  "categories": {
+    "correctness": "error",
+    "style": "error",
+    "perf": "error",
+    "suspicious": "error",
+    "restriction": "error"
+  },
+  "rules": {
+    "eslint/default-case": "off",
+    "eslint-plugin-import/group-exports": "off",
+    "eslint-plugin-import/unambiguous": "off",
+    "consistent-type-specifier-style": ["error", "prefer-inline"],
+    "exports-last": "off",
+    "filename-case": "off",
+    "func-style": "off",
+    "id-length": "off",
+    "jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".tsx"]
+      }
+    ],
+    "react-perf/jsx-no-new-function-as-prop": "off",
+    "no-console": "warn",
+    "no-magic-numbers": "off",
+    "no-named-export": "off",
+    "no-ternary": "off",
+    "no-unassigned-import": "off",
+    "prefer-default-export": "off",
+    "react-in-jsx-scope": "off",
+    "sort-imports": "off",
+    "sort-keys": "allow",
+    "typescript/consistent-type-definitions": ["error", "type"],
+    "typescript/no-import-type-side-effects": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.tsx"],
+      "rules": {
+        "explicit-function-return-type": "off",
+        "explicit-module-boundary-types": "off"
+      }
+    },
+    {
+      "files": ["*.config.ts", "*.config.js", "*.config.mjs"],
+      "rules": {
+        "no-default-export": "off"
+      }
+    },
+    {
+      "files": ["*.cjs"],
+      "rules": {
+        "no-commonjs": "off",
+        "no-require-imports": "off"
+      }
+    },
+    {
+      "files": [
+        "scripts/**/*.ts",
+        "apps/*/scripts/**/*.ts",
+        "packages/*/scripts/**/*.ts"
+      ],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ]
+}

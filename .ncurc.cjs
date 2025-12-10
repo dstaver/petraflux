@@ -4,4 +4,5 @@ module.exports = defineConfig({
   //upgrade: true,
   //filter: name => name.startsWith('@petraflux/'),
   workspaces: true,
+  cooldown: 5,
 })

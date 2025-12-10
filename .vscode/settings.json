@@ -1,12 +1,14 @@
 {
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnPaste": true,
-    "editor.formatOnSave": false
-  },
   "workbench.settings.useSplitJSON": true,
   "files.associations": {
-    "*.json": "jsonc"
+    "*.json": "jsonc",
+    "*.css": "tailwindcss"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.prettier": "explicit",
+    "source.organizeImports": "explicit",
+    "source.fixAll.oxc": "explicit",
+    "source.fixAll.ts": "always"
   },
   "typescript.experimental.useTsgo": true
 }
