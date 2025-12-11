@@ -8,15 +8,15 @@
     "check": "prettier --write . && oxlint --fix",
     "dev": "vite --port 3000",
     "format": "prettier --check --write .",
-    "lint": "oxlint -f unix",
-    "lint-fix": "oxlint -f unix --fix",
+    "lint": "oxlint -f stylish",
+    "lint-fix": "oxlint -f stylish --fix",
     "serve": "vite preview",
     "test": "vitest run",
     "typecheck": "tsgo --noEmit"
   },
   "dependencies": {
     "immer": "11.0.1",
-    "radash": "12.1.1",
+    "radash": "catalog:",
     "react": "catalog:",
     "react-aria-components": "1.13.0",
     "react-dom": "catalog:",
@@ -24,19 +24,22 @@
     "zustand-x": "3.0.2"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "0.5.19",
-    "@tailwindcss/vite": "4.1.17",
+    "@tailwindcss/typography": "catalog:",
+    "@tailwindcss/vite": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
+    "@typescript/native-preview": "catalog:",
     "@vitejs/plugin-react": "catalog:",
     "clsx": "2.1.1",
     "daisyui": "5.5.11",
     "oxlint": "catalog:",
     "postcss": "8.5.6",
-    "tailwindcss": "4.1.17",
+    "tailwindcss": "catalog:",
     "tailwindcss-animate": "1.0.7",
     "tailwindcss-react-aria-components": "2.0.1",
     "vite": "catalog:",
-    "vite-plugin-svgr": "4.5.0"
+    "vite-bundle-analyzer": "catalog:",
+    "vite-plugin-svgr": "catalog:",
+    "vitest": "catalog:"
   }
 }
