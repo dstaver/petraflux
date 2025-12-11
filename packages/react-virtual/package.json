@@ -8,8 +8,8 @@
     "check": "prettier --write . && oxlint --fix",
     "dev": "vite --port 3000",
     "format": "prettier --check --write .",
-    "lint": "oxlint -f unix",
-    "lint-fix": "oxlint -f unix --fix",
+    "lint": "oxlint -f stylish",
+    "lint-fix": "oxlint -f stylish --fix",
     "serve": "vite preview",
     "test": "vitest run",
     "typecheck": "tsgo --noEmit"

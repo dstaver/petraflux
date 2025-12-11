@@ -4,3 +4,4 @@
 **/docs
 **/snap
 pnpm-lock.yaml
+.oxlintignore

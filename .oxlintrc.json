@@ -15,53 +15,73 @@
     "suspicious": "error",
     "restriction": "error"
   },
+  "ignorePatterns": [
+    ".next",
+    "coverage",
+    "dist",
+    "docs",
+    "node_modules",
+    "snap",
+    "routeTree.gen.ts"
+  ],
   "rules": {
+    "import/consistent-type-specifier-style": "off",
+    "import/exports-last": "off",
+    "import/group-exports": "off",
+    "import/no-named-export": "off",
+    "import/no-namespace": "off",
+    "import/no-unassigned-import": "off",
+    "import/prefer-default-export": "off",
+    "import/unambiguous": "off",
     "eslint/default-case": "off",
-    "eslint-plugin-import/group-exports": "off",
-    "eslint-plugin-import/unambiguous": "off",
-    "consistent-type-specifier-style": ["error", "prefer-inline"],
-    "exports-last": "off",
-    "filename-case": "off",
-    "func-style": "off",
-    "id-length": "off",
-    "jsx-filename-extension": [
+    "eslint/func-style": "off",
+    "eslint/id-length": "off",
+    "eslint/no-console": "warn",
+    "eslint/no-magic-numbers": "off",
+    "eslint/no-ternary": "off",
+    "eslint/no-undefined": "off",
+    "eslint/prefer-template": "off",
+    "eslint/sort-imports": "off",
+    "eslint/sort-keys": "allow",
+    "react-perf/jsx-no-new-function-as-prop": "off",
+    "react-perf/jsx-no-new-object-as-prop": "off",
+    "react/jsx-filename-extension": [
       "error",
       {
         "extensions": [".tsx"]
       }
     ],
-    "react-perf/jsx-no-new-function-as-prop": "off",
-    "no-console": "warn",
-    "no-magic-numbers": "off",
-    "no-named-export": "off",
-    "no-ternary": "off",
-    "no-unassigned-import": "off",
-    "prefer-default-export": "off",
-    "react-in-jsx-scope": "off",
-    "sort-imports": "off",
-    "sort-keys": "allow",
+    "react/react-in-jsx-scope": "off",
+    "typescript/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "type-imports",
+        "fixStyle": "inline-type-imports"
+      }
+    ],
     "typescript/consistent-type-definitions": ["error", "type"],
-    "typescript/no-import-type-side-effects": "off"
+    "typescript/no-import-type-side-effects": "off",
+    "unicorn/filename-case": "off"
   },
   "overrides": [
     {
       "files": ["*.tsx"],
       "rules": {
-        "explicit-function-return-type": "off",
-        "explicit-module-boundary-types": "off"
+        "typescript/explicit-function-return-type": "off",
+        "typescript/explicit-module-boundary-types": "off"
       }
     },
     {
       "files": ["*.config.ts", "*.config.js", "*.config.mjs"],
       "rules": {
-        "no-default-export": "off"
+        "import/no-default-export": "off"
       }
     },
     {
       "files": ["*.cjs"],
       "rules": {
-        "no-commonjs": "off",
-        "no-require-imports": "off"
+        "import/no-commonjs": "off",
+        "typescript/no-require-imports": "off"
       }
     },
     {
@@ -71,7 +91,7 @@
         "packages/*/scripts/**/*.ts"
       ],
       "rules": {
-        "no-console": "off"
+        "eslint/no-console": "off"
       }
     }
   ]
