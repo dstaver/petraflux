@@ -1,0 +1,47 @@
+{
+  "name": "@petraflux/demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build && tsgo",
+    "check": "prettier --write . && oxlint --fix",
+    "dev": "vite --port 3000",
+    "format": "prettier --check --write .",
+    "lint": "oxlint -f stylish",
+    "lint-fix": "oxlint -f stylish --fix",
+    "serve": "vite preview",
+    "test": "vitest run",
+    "ts-config": "tsc --showConfig",
+    "ts-files": "tsgo --listFiles",
+    "typecheck": "tsgo --noEmit"
+  },
+  "dependencies": {
+    "@tanstack/react-devtools": "catalog:",
+    "@tanstack/react-router": "catalog:",
+    "@tanstack/react-router-devtools": "catalog:",
+    "@tanstack/router-plugin": "catalog:",
+    "lucide-react": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "@tanstack/devtools-vite": "catalog:",
+    "@types/bun": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@typescript/native-preview": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "oxlint": "catalog:",
+    "prettier": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "typescript-plugin-css-modules": "catalog:",
+    "vite": "catalog:",
+    "vite-bundle-analyzer": "catalog:",
+    "vite-plugin-svgr": "catalog:",
+    "vitest": "catalog:"
+  }
+}

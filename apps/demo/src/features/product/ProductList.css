@@ -1,0 +1,21 @@
+.products {
+  padding: 1rem;
+  container-type: inline-size;
+  max-width: 1200px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@container (min-width: 450px) {
+  .product-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+@container (min-width: 970px) {
+  .product-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
